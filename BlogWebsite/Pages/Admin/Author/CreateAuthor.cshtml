@@ -1,0 +1,59 @@
+﻿@page
+@model BlogWebsite.Pages.Admin.Author.CreateAuthorModel
+@{
+    ViewData["Title"] = "Author";
+}
+
+<form method="post">
+
+    <p>
+        <input type="Text" asp-for="Author.Given_Name" placeholder="Given Name" />
+        <span asp-validation-for="Author.Given_Name"></span>
+    </p>
+
+    <p>
+        <input type="Text" asp-for="Author.Last_Name" placeholder="Last Name" />
+        <span asp-validation-for="Author.Last_Name"></span>
+    </p>
+
+    <p>
+        <input type="date" asp-for="Author.BirthDate" placeholder="Birth Date (mm/dd/yyyy)" />
+        <span asp-validation-for="Author.BirthDate"></span>
+    </p>
+
+    <p>
+        <input type="email" asp-for="Author.emailAddress" placeholder="Email Address" />
+        <span asp-validation-for="Author.emailAddress"></span>
+    </p>
+
+    <p> <input type="url" asp-for="Author.WebsiteAddress" placeholder="Website Address" />
+        <span asp-validation-for="Author.WebsiteAddress"></span></p>
+
+    <p> <input type="tel" asp-for="Author.TelephoneNum" placeholder="Telephone Number" />
+        <span asp-validation-for="Author.TelephoneNum"></span></p>
+
+    <p> <input type="Text" asp-for="Author.Country" placeholder="Country" />
+        <span asp-validation-for="Author.Country"></span></p>
+
+    <p> <input type="Text" asp-for="Author.province" placeholder="Province" />
+        <span asp-validation-for="Author.province"></span></p>
+
+    <p> <input type="Text" asp-for="Author.PostalCode" placeholder="Postal Code" />
+        <span asp-validation-for="Author.PostalCode"></span></p>
+
+    <p> <button type="submit"style="background-color:#e5bace;border:groove;margin-right:10px;width:140px;text-align:center;margin:15px"> Add Author </button> </p>
+    <p class="info">On click, you will be redirected to the Blog page</p>
+
+
+
+
+</form>
+
+<!--<div asp-validation-summary="All" class="text-danger"></div>-->
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

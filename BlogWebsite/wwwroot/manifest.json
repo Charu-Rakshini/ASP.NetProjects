@@ -1,0 +1,8 @@
+﻿{
+  "name": "Blog Website",
+  "short_name": "CV_Blog",
+  "description": "This is a web app for publishing Blog post !",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "natural"
+}
