@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Models
 {
     public class AuthorModel
     {
-        
+        [Key]
+        [HiddenInput]
+        [Required]
+        public String AuthorID { get; set; }
+
         [Required(ErrorMessage = "Please enter your first name")]
         [MinLength(2, ErrorMessage = "First name must be atleast 2 alphabets")]
         [StringLength(25)]
