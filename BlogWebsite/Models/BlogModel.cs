@@ -9,8 +9,7 @@ namespace BlogWebsite.Models
     {
         [Key]
         [HiddenInput]
-        [Required]
-        public String BlogID { get; set; }
+        public Guid BlogModelId { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -22,13 +21,9 @@ namespace BlogWebsite.Models
 
         [ForeignKey("AuthorModel")]
         [Required]
-        public AuthorModel AuthorID { get; set; }
-
-        [Required]
         public AuthorModel Author { get; set; }
 
 
-        [Display(Name = "Publish Date")]
         [DataType(DataType.Date)]
         public DateTime PublishDate { get; set; }
 

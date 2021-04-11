@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogWebsite.Models
@@ -9,8 +10,7 @@ namespace BlogWebsite.Models
     {
         [Key]
         [HiddenInput]
-        [Required]
-        public String AuthorID { get; set; }
+        public Guid AuthorModelId { get; set; }
 
         [Required(ErrorMessage = "Please enter your first name")]
         [MinLength(2, ErrorMessage = "First name must be atleast 2 alphabets")]
@@ -22,14 +22,12 @@ namespace BlogWebsite.Models
         [StringLength(25)]
         public String Last_Name { get; set; }
 
-        [Display(Name = "Birthday")]
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; } = new DateTime(2000, 1, 1);
 
-        [Key]
         [Required]
         [EmailAddress(ErrorMessage = "Please provide a valid email address")]
-        public EmailAddressAttribute emailAddress { get; set; }
+        public String emailAddress { get; set; }
 
         [Url]
         public String WebsiteAddress { get; set; }
@@ -42,34 +40,6 @@ namespace BlogWebsite.Models
         public String province { get; set; }
 
         public String PostalCode { get; set; }
-
-        //private DateTime currentYear = DateTime.Now;
-
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    if (birthDate > currentYear)
-        //    {
-        //        yield return new ValidationResult(
-        //            $"Birthday cannot be today's date.",
-        //            new[] { nameof(birthDate) });
-        //    }
-        //}
-
-        //[HttpPost]
-        //public IActionResult Create(AuthorModel model)
-        //{
-        //    string message = "";
-
-        //    if ()
-        //    {
-        //        message = "product " + model.Name + " created successfully";
-        //    }
-        //    else
-        //    {
-        //        return View(model);
-        //    }
-        //    return Content(message);
-        //}
 
 
         public AuthorModel()
