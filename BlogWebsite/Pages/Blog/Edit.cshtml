@@ -15,6 +15,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="BlogModel.BlogModelId" />
             <div class="form-group">
+                <label asp-for="BlogModel.AuthorEmailID" class="control-label"></label>
+                <input asp-for="BlogModel.AuthorEmailID" class="form-control" />
+                <span asp-validation-for="BlogModel.AuthorEmailID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogModel.AuthorName" class="control-label"></label>
+                <input asp-for="BlogModel.AuthorName" class="form-control" />
+                <span asp-validation-for="BlogModel.AuthorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="BlogModel.Title" class="control-label"></label>
                 <input asp-for="BlogModel.Title" class="form-control" />
                 <span asp-validation-for="BlogModel.Title" class="text-danger"></span>

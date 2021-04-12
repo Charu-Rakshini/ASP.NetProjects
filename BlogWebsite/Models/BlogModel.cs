@@ -11,6 +11,13 @@ namespace BlogWebsite.Models
         [HiddenInput]
         public Guid BlogModelId { get; set; }
 
+        [ForeignKey("AuthorModel")]
+        [Required]
+        public String AuthorEmailID { get; set; }
+
+        [Required]
+        public String AuthorName { get; set; }
+
         [Required]
         [StringLength(100)]
         public String Title { get; set; }
@@ -18,10 +25,6 @@ namespace BlogWebsite.Models
         [Required]
         [StringLength(5000)]
         public String Content { get; set; }
-
-        [ForeignKey("AuthorModel")]
-        [Required]
-        public AuthorModel Author { get; set; }
 
 
         [DataType(DataType.Date)]

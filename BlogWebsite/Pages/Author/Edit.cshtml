@@ -13,7 +13,6 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="AuthorModel.AuthorModelId" />
             <div class="form-group">
                 <label asp-for="AuthorModel.Given_Name" class="control-label"></label>
                 <input asp-for="AuthorModel.Given_Name" class="form-control" />
@@ -29,11 +28,7 @@
                 <input asp-for="AuthorModel.BirthDate" class="form-control" />
                 <span asp-validation-for="AuthorModel.BirthDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="AuthorModel.emailAddress" class="control-label"></label>
-                <input asp-for="AuthorModel.emailAddress" class="form-control" />
-                <span asp-validation-for="AuthorModel.emailAddress" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="AuthorModel.emailAddress" />
             <div class="form-group">
                 <label asp-for="AuthorModel.WebsiteAddress" class="control-label"></label>
                 <input asp-for="AuthorModel.WebsiteAddress" class="form-control" />

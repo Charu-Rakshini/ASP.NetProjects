@@ -23,9 +23,6 @@
                 @Html.DisplayNameFor(model => model.AuthorModel[0].BirthDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AuthorModel[0].emailAddress)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.AuthorModel[0].WebsiteAddress)
             </th>
             <th>
@@ -56,9 +53,6 @@
                 @Html.DisplayFor(modelItem => item.BirthDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.emailAddress)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.WebsiteAddress)
             </td>
             <td>
@@ -74,9 +68,9 @@
                 @Html.DisplayFor(modelItem => item.PostalCode)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.AuthorModelId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.AuthorModelId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.AuthorModelId">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.emailAddress">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.emailAddress">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.emailAddress">Delete</a>
             </td>
         </tr>
 }

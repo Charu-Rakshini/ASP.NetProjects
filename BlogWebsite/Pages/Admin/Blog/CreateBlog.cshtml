@@ -25,10 +25,10 @@
             <textarea asp-for="Blog.Content" placeholder="Content"></textarea>
             <span asp-validation-for="Blog.Content"></span>
         </p>
-        <p>
+        @*<p>
             <select asp-for="Blog.Author" asp-items="Model.AuthorList" placeholder="Select Author"></select>
             <span asp-validation-for="Blog.Author"></span>
-        </p>
+        </p>*@
         <p>
             <input type="date" asp-for="Blog.PublishDate" placeholder="Publish Date" />
             <span asp-validation-for="Blog.PublishDate"></span>

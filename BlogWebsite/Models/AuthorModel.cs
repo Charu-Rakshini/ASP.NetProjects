@@ -8,9 +8,9 @@ namespace BlogWebsite.Models
 {
     public class AuthorModel
     {
-        [Key]
-        [HiddenInput]
-        public Guid AuthorModelId { get; set; }
+        
+        //[HiddenInput]
+        //public Guid AuthorModelId { get; set; }
 
         [Required(ErrorMessage = "Please enter your first name")]
         [MinLength(2, ErrorMessage = "First name must be atleast 2 alphabets")]
@@ -25,6 +25,7 @@ namespace BlogWebsite.Models
         [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; } = new DateTime(2000, 1, 1);
 
+        [Key]
         [Required]
         [EmailAddress(ErrorMessage = "Please provide a valid email address")]
         public String emailAddress { get; set; }

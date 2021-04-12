@@ -21,14 +21,14 @@ namespace BlogWebsite.Pages.Author
 
         public AuthorModel AuthorModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(Guid? id)
+        public async Task<IActionResult> OnGetAsync(string id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            AuthorModel = await _context.Authors.FirstOrDefaultAsync(m => m.AuthorModelId == id);
+            AuthorModel = await _context.Authors.FirstOrDefaultAsync(m => m.emailAddress == id);
 
             if (AuthorModel == null)
             {

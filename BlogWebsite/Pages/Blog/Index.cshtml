@@ -14,6 +14,12 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.BlogModel[0].AuthorEmailID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogModel[0].AuthorName)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.BlogModel[0].Title)
             </th>
             <th>
@@ -28,6 +34,12 @@
     <tbody>
 @foreach (var item in Model.BlogModel) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorEmailID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorName)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
