@@ -45,3 +45,21 @@ if ('caches' in window) {
 
     offlineBtn.removeAttr('hidden');
 }
+
+
+
+function share() {
+    if (!("share" in navigator)) {
+        alert('Web Share API not supported.');
+        return;
+    }
+
+    navigator.share({
+        title: 'CV Blog Website',
+        text: 'Love Reading? Then check out this website for amazing blog posts!!',
+        url: '/'
+    })
+        .then(() => console.log('Successful share'))
+        .catch(error => console.log('Error sharing:', error));
+}
+
