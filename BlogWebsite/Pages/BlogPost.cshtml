@@ -1,0 +1,14 @@
+﻿@page
+@model BlogWebsite.Pages.BlogPostModel
+@{
+}
+
+@if (Model.Blog != null)
+{
+    <h2>@Model.Blog.Title</h2>
+    <h3>@Model.Blog.AuthorName</h3>
+    <p>@Model.Blog.Content</p>
+}
+
+
+<input hidden id="saveOffline" type="button" value="📌 Save Offline" />

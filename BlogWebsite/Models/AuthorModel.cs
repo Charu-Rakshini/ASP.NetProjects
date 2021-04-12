@@ -38,7 +38,7 @@ namespace BlogWebsite.Models
 
         public String Country { get; set; }
 
-        public String province { get; set; }
+        public String Province { get; set; }
 
         public String PostalCode { get; set; }
 

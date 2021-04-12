@@ -14,7 +14,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.BlogModel[0].AuthorEmailID)
+                @Html.DisplayNameFor(model => model.BlogModel[0].AuthorEmail)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.BlogModel[0].AuthorName)
@@ -35,7 +35,7 @@
 @foreach (var item in Model.BlogModel) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AuthorEmailID)
+                @Html.DisplayFor(modelItem => item.AuthorEmail)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.AuthorName)

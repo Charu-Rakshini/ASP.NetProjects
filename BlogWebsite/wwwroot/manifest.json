@@ -3,6 +3,20 @@
   "short_name": "CV_Blog",
   "description": "This is a web app for publishing Blog post !",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "natural"
+  "orientation": "natural",
+  "lang": "English",
+  "icons": [
+    {
+      "sizes": "900x900",
+      "type": "image/jpg",
+      "src": "lib/images/logo.jpg"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/jpg",
+      "src": "lib/images/logo.jpg"
+    }
+  ]
 }

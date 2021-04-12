@@ -23,7 +23,7 @@ namespace BlogWebsite.Pages.Blog
         [BindProperty]
         public BlogModel BlogModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(Guid? id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
@@ -69,7 +69,7 @@ namespace BlogWebsite.Pages.Blog
             return RedirectToPage("./Index");
         }
 
-        private bool BlogModelExists(Guid id)
+        private bool BlogModelExists(int id)
         {
             return _context.Blogs.Any(e => e.BlogModelId == id);
         }

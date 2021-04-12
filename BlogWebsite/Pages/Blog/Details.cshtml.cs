@@ -21,7 +21,7 @@ namespace BlogWebsite.Pages.Blog
 
         public BlogModel BlogModel { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(Guid? id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {

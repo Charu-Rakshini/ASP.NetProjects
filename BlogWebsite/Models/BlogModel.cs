@@ -9,11 +9,11 @@ namespace BlogWebsite.Models
     {
         [Key]
         [HiddenInput]
-        public Guid BlogModelId { get; set; }
+        public int BlogModelId { get; set; }
 
         [ForeignKey("AuthorModel")]
         [Required]
-        public String AuthorEmailID { get; set; }
+        public String AuthorEmail { get; set; }
 
         [Required]
         public String AuthorName { get; set; }
