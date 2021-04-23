@@ -1,0 +1,84 @@
+﻿@page
+@model ToDoWebsite.Pages.TasksModel
+@{
+        ViewData["Title"] = "Details";
+}
+
+
+<h1>All Tasks</h1>
+
+<div>
+    <h4></h4>
+    <hr />
+    @foreach (var task in Model.TaskList)
+    {
+<dl class="row" style="padding:10px">
+
+    <dt class="col-sm-2" style="padding:2px">
+        @Html.DisplayNameFor(model => @task.Title)
+    </dt>
+    <dd class="col-sm-10">
+        <h4>@Html.DisplayFor(model => @task.Title)</h4>
+    </dd>
+    <dt class="col-sm-2" style="padding:2px">
+        @Html.DisplayNameFor(model => @task.Description)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.Description)
+    </dd>
+    <dt class="col-sm-2"  style="padding:2px">
+        @Html.DisplayNameFor(model => @task.UserEmail)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.UserEmail)
+    </dd>
+
+    <dt class="col-sm-2"  style="padding:2px">
+        @Html.DisplayNameFor(model => @task.AddedDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.AddedDate)
+    </dd>
+    <dt class="col-sm-2"  style="padding:2px">
+        @Html.DisplayNameFor(model => @task.DueDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.DueDate)
+    </dd>
+    <dt class="col-sm-2" style="padding:2px">
+        @Html.DisplayNameFor(model => @task.Done)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.Done)
+    </dd>
+    <dt class="col-sm-2" style="padding:2px">
+        @Html.DisplayNameFor(model => @task.DoneDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => @task.DoneDate)
+    </dd>
+    <dt class="col-sm-2" style="padding:2px" >Mark as Complete</dt>
+    <dd class="col-sm-10">
+        <form asp-action="Edit">
+            <input type="hidden" name="ToDoModelId" value="@task.ToDoModelId" />
+            <button>Complete</button>
+        </form>
+    </dd>
+
+</dl>
+    
+<!--</div>
+
+
+    <h2>@task.Title</h2>
+    <p>@task.UserEmail</p>
+    <p>@task.Description</p>
+    <p>@task.AddedDate</p>
+    <p>@task.DueDate</p>
+    <p>@task.DoneDate</p>
+    <p>@task.Done</p>-->
+
+    @*<p>@task.</p>*@
+    
+
+}

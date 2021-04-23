@@ -6,6 +6,27 @@
 
 <div class="text-center">
     <h1 class="display-4">Hello!</h1>
+
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    @foreach (var todo in Model.Done)
+    {
+        <h2 class="col-md-6">@todo.Title</h2>
+        <p class="col-md-6">@todo.Description</p>
+
+    }
+
+    @foreach (var todo in Model.Next)
+    {
+        <h2>@todo.Title</h2>
+        <p>@todo.Description</p>
+
+    }
+}
+else
+{
     <p>Do you keep forgetting the tasks to do?</p>
     <p>Sign up now to keep a track of all your tasks!!</p>
 
@@ -13,15 +34,15 @@
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Sign Up Here</a>
     </h3>
 
-
-@if (User.Identity.IsAuthenticated) {
 }
 
-    <!--<div class="form-group">-->
-    @*<input type="button" asp-page="/Account/Register" value="Sign Up" class="btn btn-primary" />*@
-    <!--</div>-->
-    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
-</div>
+
+
+
+<!--<div class="form-group">-->
+@*<input type="button" asp-page="/Account/Register" value="Sign Up" class="btn btn-primary" />*@
+<!--</div>-->
+@*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
 
 
 
