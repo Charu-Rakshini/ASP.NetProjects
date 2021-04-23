@@ -11,19 +11,38 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    @foreach (var todo in Model.Done)
-    {
-        <h2 class="col-md-6">@todo.Title</h2>
-        <p class="col-md-6">@todo.Description</p>
+    <table style="padding:10px" >
+        <tr class="col-md-12" >
+            <td class="col-md-6"> <h2>Tasks completed yesterday</h2></td>
+            <td class="col-md-6"> <h2>Tasks to complete today</h2></td>
+        </tr>
+        <tr class="col-md-12" style="padding:2px">
+            <td class="col-md-6">
+               
 
-    }
+                @foreach (var todo in Model.Done)
+                {
+                    <h4>Task: @todo.Title</h4>
+                    <p >@todo.Description</p>
+                    
 
-    @foreach (var todo in Model.Next)
-    {
-        <h2>@todo.Title</h2>
-        <p>@todo.Description</p>
+                }
+            </td>
+            <td class="col-md-6">
+               
+                @foreach (var todo in Model.Next)
+                {
+                    <h4>Task: @todo.Title</h4>
+                    <p>@todo.Description</p>
+                    
 
-    }
+                }
+            </td>
+        </tr>
+    </table>
+   
+
+   
 }
 else
 {

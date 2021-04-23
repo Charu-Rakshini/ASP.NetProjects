@@ -27,6 +27,7 @@ namespace ToDoWebsite.Pages
             _context.Update(task);
             _context.SaveChanges();
             Redirect("/index");
+            TaskList = _context.ToDos.ToList();
         }
         public void OnGet()
         {

@@ -37,7 +37,7 @@ namespace ToDoWebsite.Pages
         public void OnGet()
         {
             //Temp = _context.ToDos.Where(todo => todo.DueDate < DateTime.Now).ToList();
-            TimeSpan hoursOfDay = new TimeSpan(24, 0, 0);
+           // TimeSpan hoursOfDay = new TimeSpan(24, 0, 0);
             //var timeSinceOrder = DateTime.Now - Temp.FirstOrDefault<DueDate>;
 
             //if (timeSinceOrder < TimeSpan.FromHours(24))
