@@ -5,6 +5,24 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Hello!</h1>
+    <p>Do you keep forgetting the tasks to do?</p>
+    <p>Sign up now to keep a track of all your tasks!!</p>
+
+    <h3>
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Sign Up Here</a>
+    </h3>
+
+
+@if (User.Identity.IsAuthenticated) {
+}
+
+    <!--<div class="form-group">-->
+    @*<input type="button" asp-page="/Account/Register" value="Sign Up" class="btn btn-primary" />*@
+    <!--</div>-->
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
 </div>
+
+
+
+
