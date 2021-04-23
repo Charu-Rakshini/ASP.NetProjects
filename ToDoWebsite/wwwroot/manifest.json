@@ -1,0 +1,22 @@
+﻿{
+  "name": "To Do Website",
+  "short_name": "CV_ToDo",
+  "description": "This is a web app for creating and keeping track of tasks !",
+  "start_url": "/",
+  "scope": "/",
+  "display": "fullscreen",
+  "orientation": "natural",
+  "lang": "English",
+  "icons": [
+    {
+      "sizes": "900x900",
+      "type": "image/jpg",
+      "src": "lib/images/logo.jpg"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/jpg",
+      "src": "lib/images/logo.jpg"
+    }
+  ]
+}
