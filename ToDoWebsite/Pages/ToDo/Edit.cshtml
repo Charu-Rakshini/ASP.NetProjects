@@ -1,0 +1,65 @@
+@page
+@model ToDoWebsite.Pages.ToDo.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ToDoModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ToDoModel.ToDoModelId" />
+            <div class="form-group">
+                <label asp-for="ToDoModel.UserEmail" class="control-label"></label>
+                <input asp-for="ToDoModel.UserEmail" class="form-control" />
+                <span asp-validation-for="ToDoModel.UserEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoModel.Title" class="control-label"></label>
+                <input asp-for="ToDoModel.Title" class="form-control" />
+                <span asp-validation-for="ToDoModel.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoModel.Description" class="control-label"></label>
+                <input asp-for="ToDoModel.Description" class="form-control" />
+                <span asp-validation-for="ToDoModel.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoModel.AddedDate" class="control-label"></label>
+                <input asp-for="ToDoModel.AddedDate" class="form-control" />
+                <span asp-validation-for="ToDoModel.AddedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoModel.DueDate" class="control-label"></label>
+                <input asp-for="ToDoModel.DueDate" class="form-control" />
+                <span asp-validation-for="ToDoModel.DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ToDoModel.Done" /> @Html.DisplayNameFor(model => model.ToDoModel.Done)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDoModel.DoneDate" class="control-label"></label>
+                <input asp-for="ToDoModel.DoneDate" class="form-control" />
+                <span asp-validation-for="ToDoModel.DoneDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
