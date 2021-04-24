@@ -1,9 +1,7 @@
 @page
 @model ToDoWebsite.Pages.ToDo.CreateModel
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
 <h1>Create</h1>
 
@@ -11,7 +9,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post">
+        <form method="post" id="createForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ToDoModel.UserEmail" class="control-label"></label>
@@ -58,6 +56,13 @@
 <div>
     <a asp-page="Index">Back to List</a>
 </div>
+
+<p>Turn the network connection on/off to see the changes.</p>
+
+<p>Initial connection state was <b id="status">unknown</b>.</p>
+
+<div id="target"></div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
